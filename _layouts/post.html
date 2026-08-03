@@ -1,0 +1,46 @@
+---
+layout: default_style
+---
+
+<!-- Main Container -->
+<div id="banners"></div>
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-12">
+
+            <h1 class="blog-title">
+                <i class="fa fa-file-text"></i>
+                {{ page.title }}
+            </h1>
+
+            <hr>
+
+            {% if page.image %}
+            <img 
+                src="{{ '/assets/img/works/' | relative_url }}{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}/{{ page.image }}"
+                alt="{{ page.title }}"
+                class="img-responsive blog-image">
+            <br>
+            {% endif %}
+
+
+            <p>
+                {{ page.description }}
+            </p>
+
+
+            <div class="post-content">
+                {{ content }}
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--End Main Container -->
