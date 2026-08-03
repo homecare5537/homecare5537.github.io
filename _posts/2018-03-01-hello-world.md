@@ -158,7 +158,9 @@ categories: 테스트
 
 <br>
 
-<img src="{{ '/assets/img/공지이미지.png' | relative_url }}" alt="공지사항 이미지" style="width:600px;">
+<img src="{{ '/assets/img/공지이미지.png' | relative_url }}"
+     alt="공지사항 이미지"
+     style="max-width:600px; width:100%; height:auto; display:block; margin:0 auto;">
 
 <br>
 
