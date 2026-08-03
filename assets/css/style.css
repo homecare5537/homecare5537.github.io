@@ -72,6 +72,15 @@ License URI:http://www.gnu.org/licenses/gpl-2.0.html
 
  }
 }
+
+.services-header-title {
+    font-size: clamp(28px, 5vw, 42px);
+}
+
+.services-header-body {
+    font-size: clamp(16px, 2.5vw, 20px);
+}
+
 .tales {
   width: 100%;
 }
