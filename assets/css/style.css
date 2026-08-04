@@ -84,6 +84,15 @@ License URI:http://www.gnu.org/licenses/gpl-2.0.html
 .tales {
   width: 100%;
 }
+
+
+.work-thumb {
+    width:100%;
+    aspect-ratio:1 / 1;
+    object-fit:cover;
+    object-position:center;
+}
+
 .blog-post{
  margin-bottom: 30px;   
 }
@@ -143,20 +152,18 @@ float: right;
 }
 
 
-.notice-image {
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-    border-radius: 12px;
-    display: block;
-    margin: 0 auto;
+.post-content .notice-image {
+    width: 100% !important;
+    max-width: 320px !important;
+    height: auto !important;
+    border-radius: 12px !important;
+    display: block !important;
+    margin: 0 auto !important;
 }
 
-
-/* 모바일에서는 화면 폭 맞춤 */
 @media (max-width:768px) {
-    .notice-image {
-        max-width: 100%;
+    .post-content .notice-image {
+        max-width: 100% !important;
     }
 }
 
