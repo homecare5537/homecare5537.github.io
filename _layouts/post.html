@@ -11,17 +11,20 @@ layout: default_style
 
         <div class="col-md-12">
 
+
             {% if page.image %}
-            <img
-                src="{{ '/assets/img/works/' | relative_url }}{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}/{{ page.image }}"
+            <img 
+                src="{{ page.image | relative_url }}"
                 alt="{{ page.title }}"
                 class="img-responsive blog-image">
             <br>
             {% endif %}
 
+
             <div class="post-content">
                 {{ content }}
             </div>
+
 
         </div>
 
