@@ -154,7 +154,7 @@ float: right;
 
 .post-content .notice-image {
     width: 100% !important;
-    max-width: 320px !important;
+    max-width: 500px !important;
     height: auto !important;
     border-radius: 12px !important;
     display: block !important;
