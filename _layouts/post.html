@@ -18,20 +18,6 @@ layout: default_style
 
             <hr>
 
-            {% if page.image %}
-            <img 
-                src="{{ '/assets/img/works/' | relative_url }}{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}/{{ page.image }}"
-                alt="{{ page.title }}"
-                class="img-responsive blog-image">
-            <br>
-            {% endif %}
-
-
-            <p>
-                {{ page.description }}
-            </p>
-
-
             <div class="post-content">
                 {{ content }}
             </div>
