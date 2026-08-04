@@ -2,7 +2,6 @@
 layout: default_style
 ---
 
-<!-- Main Container -->
 <div id="banners"></div>
 
 <div class="container">
@@ -11,25 +10,12 @@ layout: default_style
 
         <div class="col-md-12">
 
-
-            {% if page.image %}
-            <img 
-                src="{{ page.image | relative_url }}"
-                alt="{{ page.title }}"
-                class="img-responsive blog-image">
-            <br>
-            {% endif %}
-
-
             <div class="post-content">
                 {{ content }}
             </div>
-
 
         </div>
 
     </div>
 
 </div>
-
-<!--End Main Container -->
