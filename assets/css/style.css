@@ -137,6 +137,24 @@ float: right;
 }
 
 
+.notice-image {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* 모바일에서는 화면 폭 맞춤 */
+@media (max-width:768px) {
+    .notice-image {
+        max-width: 100%;
+    }
+}
+
+
 .title-text{
   font-family: 'Raleway', sans-serif;  
   letter-spacing: .2px;
