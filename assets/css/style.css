@@ -194,6 +194,164 @@ address {
     }
  
 }
+
+
+<style>
+/* ===========================
+   Title & Description 숨김
+=========================== */
+
+header,
+.post-header,
+.page-header,
+.entry-header,
+.post-hero,
+.page__hero,
+.page__header,
+.page__title,
+.page-title,
+.post-title,
+.entry-title,
+.page__lead,
+.post-excerpt,
+.page-description,
+.page__excerpt,
+.description {
+  display: none !important;
+}
+
+/* ===========================
+   본문
+=========================== */
+
+.post,
+article,
+.post-content {
+  text-align: center !important;
+  line-height: 1.75 !important;
+}
+
+.post p,
+article p,
+.post-content p {
+  margin-bottom: 1.2em !important;
+}
+
+/* ===========================
+   제목
+=========================== */
+
+.post h2,
+article h2,
+.post-content h2 {
+  margin-top: 2em !important;
+  margin-bottom: .8em !important;
+}
+
+/* ===========================
+   리스트
+=========================== */
+
+.post ul,
+article ul,
+.post-content ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 1.2em auto !important;
+  text-align: center !important;
+}
+
+.post ul li,
+article ul li,
+.post-content ul li {
+  margin-bottom: .6em !important;
+}
+
+.post ul li::before,
+article ul li::before,
+.post-content ul li::before {
+  content: "• ";
+  font-weight: bold;
+}
+
+.post ol,
+article ol,
+.post-content ol {
+  list-style-position: inside !important;
+  padding-left: 0 !important;
+  margin: 1.2em auto !important;
+  text-align: center !important;
+}
+
+.post ol li,
+article ol li,
+.post-content ol li {
+  margin-bottom: .6em !important;
+}
+
+/* ===========================
+   표
+=========================== */
+
+.post table,
+article table,
+.post-content table {
+  width: 100% !important;
+  max-width: 900px !important;
+  margin: 2em auto !important;
+  border-collapse: separate !important;
+  border-spacing: 12px !important;
+}
+
+.post table td,
+article table td,
+.post-content table td {
+  padding: 8px !important;
+  vertical-align: top !important;
+}
+
+/* ===========================
+   이미지
+=========================== */
+
+.post img,
+article img,
+.post-content img {
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 8px !important;
+}
+
+/* ===========================
+   모바일
+=========================== */
+
+@media (max-width:768px){
+
+.post table,
+.post tbody,
+.post tr,
+.post td,
+article table,
+article tbody,
+article tr,
+article td,
+.post-content table,
+.post-content tbody,
+.post-content tr,
+.post-content td{
+    display:block !important;
+    width:100% !important;
+}
+
+.post table td,
+article table td,
+.post-content table td{
+    padding:10px 0 !important;
+}
+
+}
+</style>
 /*
 * ==========================================================================
 * Nav Pills
