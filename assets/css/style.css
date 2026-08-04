@@ -292,7 +292,7 @@ article table,
   max-width: 900px !important;
   margin: 2em auto !important;
   border-collapse: separate !important;
-  border-spacing: 12px !important;
+  border-spacing: 6px !important;
 }
 
 .post table td,
