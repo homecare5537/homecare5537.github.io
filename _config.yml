@@ -49,7 +49,7 @@ defaults:
       path: ""
       type: posts
     values:
-      permalink: /work/:categories/:year-:month-:day-:title/
+      permalink: /work/:categories/:year-:month-:day-:title
 
 
 encoding: utf-8  
