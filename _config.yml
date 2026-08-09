@@ -18,7 +18,7 @@ email: homecare5537@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   완벽한 설치, 깔끔한 시공, 투명한 견적! 수리/보수/설치 전문 홈케어 집수리입니다.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.k-homecare24.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Company Information
 company_name: 홈케어 집수리
