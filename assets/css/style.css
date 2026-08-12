@@ -666,9 +666,9 @@ p.blog-text{
 }
 .services-group {
   padding: 10px;
-  background: transparent;
-  color: #333333;
-  border: 1px solid #dcdcdc;
+  background: rgba(255, 255, 255, 0.80);
+  color: #333;
+  border: 1.3px solid rgba(6, 31, 32, 0.25);
   border-radius: 8px;
 }
 
