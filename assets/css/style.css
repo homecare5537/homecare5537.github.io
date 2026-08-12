@@ -667,11 +667,12 @@ p.blog-text{
 .services-group {
   padding: 10px;
   background: transparent;
-  color: #1bbd9b;
-  border: 1px solid #1bbd9b;
+  color: #333333;
+  border: 1px solid #dcdcdc;
   border-radius: 8px;
 }
-.service-icon {
+
+.services-icon {
   color: #1bbd9b;
 }
 
