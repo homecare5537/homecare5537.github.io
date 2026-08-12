@@ -666,8 +666,10 @@ p.blog-text{
 }
 .services-group{
   padding: 10px;
-  background:#98eddb;
+  background:#ffffff;
   color: white;
+  border: 1px solid #061F20;
+  border-radius: 8px;
 }
 .service-icon{
   color: white;
