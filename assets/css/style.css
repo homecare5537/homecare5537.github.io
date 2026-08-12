@@ -664,15 +664,15 @@ p.blog-text{
     border-radius: 3px; 
     transition:.4s;  
 }
-.services-group{
+.services-group {
   padding: 10px;
-  background:#e5e5e5;
-  color: white;
-  border: 1px solid #061F20;
+  background: transparent;
+  color: #1bbd9b;
+  border: 1px solid #1bbd9b;
   border-radius: 8px;
 }
-.service-icon{
-  color: white;
+.service-icon {
+  color: #1bbd9b;
 }
 
 
