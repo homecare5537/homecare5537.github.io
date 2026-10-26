@@ -54,64 +54,102 @@ published: true
 
     <!-- Pagination -->
     {% if paginator.total_pages > 1 %}
-    
-    <div class="row">
-        <div class="col-md-12 text-center">
-    
-            <ul class="pagination">
-    
-                {% if paginator.previous_page %}
-                <li>
-                    <a href="{{ paginator.previous_page_path | relative_url }}">
-                        &laquo;
-                    </a>
-                </li>
-                {% endif %}
-    
-    
-                {% for page in (1..paginator.total_pages) %}
-    
-                    {% if page == paginator.page %}
-    
-                    <li class="active">
-                        <span>{{ page }}</span>
-                    </li>
-    
-                    {% elsif page == 1 %}
-    
-                    <li>
-                        <a href="{{ site.paginate_path | relative_url | replace: 'page:num/', '' }}">
-                            {{ page }}
-                        </a>
-                    </li>
-    
-                    {% else %}
-    
-                    <li>
-                        <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">
-                            {{ page }}
-                        </a>
-                    </li>
-    
-                    {% endif %}
-    
-                {% endfor %}
-    
-    
-                {% if paginator.next_page %}
-                <li>
-                    <a href="{{ paginator.next_page_path | relative_url }}">
-                        &raquo;
-                    </a>
-                </li>
-                {% endif %}
-    
-            </ul>
-    
-        </div>
-    </div>
-    
+
+    {% assign page_group = paginator.page | minus: 1 | divided_by: 10 %}
+    {% assign start_page = page_group | times: 10 | plus: 1 %}
+    {% assign end_page = start_page | plus: 9 %}
+
+    {% if end_page > paginator.total_pages %}
+        {% assign end_page = paginator.total_pages %}
     {% endif %}
 
+    <div class="row">
+        <div class="col-md-12 text-center">
+
+            <ul class="pagination">
+
+                <!-- 이전 10페이지 그룹 -->
+                {% if start_page > 1 %}
+
+                    {% assign prev_group_page = start_page | minus: 1 %}
+
+                    <li>
+                        {% if prev_group_page == 1 %}
+                            <a href="{{ '/' | relative_url }}">
+                                &laquo;
+                            </a>
+                        {% else %}
+                            <a href="{{ site.paginate_path | relative_url | replace: ':num', prev_group_page }}">
+                                &laquo;
+                            </a>
+                        {% endif %}
+                    </li>
+
+                {% elsif paginator.previous_page %}
+
+                    <li>
+                        <a href="{{ paginator.previous_page_path | relative_url }}">
+                            &laquo;
+                        </a>
+                    </li>
+
+                {% endif %}
+
+                <!-- 현재 그룹의 페이지 번호 -->
+                {% for page in (start_page..end_page) %}
+
+                    {% if page == paginator.page %}
+
+                        <li class="active">
+                            <span>{{ page }}</span>
+                        </li>
+
+                    {% elsif page == 1 %}
+
+                        <li>
+                            <a href="{{ '/' | relative_url }}">
+                                {{ page }}
+                            </a>
+                        </li>
+
+                    {% else %}
+
+                        <li>
+                            <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">
+                                {{ page }}
+                            </a>
+                        </li>
+
+                    {% endif %}
+
+                {% endfor %}
+
+                <!-- 다음 10페이지 그룹 -->
+                {% if end_page < paginator.total_pages %}
+
+                    {% assign next_group_page = end_page | plus: 1 %}
+
+                    <li>
+                        <a href="{{ site.paginate_path | relative_url | replace: ':num', next_group_page }}">
+                            &raquo;
+                        </a>
+                    </li>
+
+                {% elsif paginator.next_page %}
+
+                    <li>
+                        <a href="{{ paginator.next_page_path | relative_url }}">
+                            &raquo;
+                        </a>
+                    </li>
+
+                {% endif %}
+
+            </ul>
+
+        </div>
+    </div>
+
+    {% endif %}
 
 </div>
